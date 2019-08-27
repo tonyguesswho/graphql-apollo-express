@@ -32,6 +32,8 @@ const getUser = async token => {
 // const userLoader = new DataLoader(keys => loaders.user.batchUsers(keys, db));
 
 const server = new ApolloServer({
+  introspection: true,
+  playground: true,
   typeDefs: schema,
   resolvers,
   schemaDirectives,

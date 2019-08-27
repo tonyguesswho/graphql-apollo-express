@@ -4,7 +4,8 @@
   "description": "My mini boilerplate for graphql/express/Apollo",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js --ext js,graphql --exec babel-node",
+    "start": "node src/index.js --exec babel-node",
+    "dev": "nodemon src/index.js --ext js,graphql --exec babel-node",
     "test": "cross-env NODE_ENV=test mocha --require @babel/register 'src/**/*.spec.js' --exit",
     "test-migrate": "cross-env NODE_ENV=test sequelize db:migrate",
     "undo-test-migrate": "cross-env NODE_ENV=test sequelize db:migrate:undo:all"
